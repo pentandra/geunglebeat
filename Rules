@@ -13,7 +13,7 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/stylesheet/' do
+compile '/js/*/' do
   # don’t filter or layout
 end
 
@@ -28,8 +28,14 @@ compile '*' do
   end
 end
 
-route '/stylesheet/' do
-  '/style.css'
+route '/css/*/' do
+  # don't generate a directory like we do for HTML files
+  item.identifier.chop + '.css'
+end
+
+route '/js/*/' do
+  # don't generate a directory like we do for HTML files
+  item.identifier.chop + '.js'
 end
 
 route '*' do

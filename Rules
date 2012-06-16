@@ -23,6 +23,8 @@ compile '*' do
   else
     filter :erb
     layout 'default'
+
+    filter :relativize_paths, :type => :html
   end
 end
 

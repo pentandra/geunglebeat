@@ -3,7 +3,12 @@ GEM
   specs:
     adsf (1.1.1)
       rack (>= 1.0.0)
+    chunky_png (1.2.5)
     colored (1.2)
+    compass (0.12.1)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     cri (2.3.0)
       colored (>= 1.2)
     fssm (0.2.9)
@@ -11,12 +16,14 @@ GEM
       cri (~> 2.2)
     nokogiri (1.5.4)
     rack (1.4.1)
+    sass (3.1.19)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   adsf
+  compass
   fssm
   nanoc
   nokogiri

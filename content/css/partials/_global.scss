@@ -5,8 +5,14 @@ body {
 
 header[role="banner"] {
   background: #2a1a0d url('/img/darkleather.jpg');
+  margin: 0;
+  @include single-box-shadow(#000, 0, 0, 10px);
+
+  h1 {
+    margin: 6px;
+  }
 }
 
 .geungle-beat {
-  background: transparent no-repeat url('/img/geungle_beat_logo.png');
+  background: transparent left center no-repeat url('/img/geungle_beat_logo.png');
 }

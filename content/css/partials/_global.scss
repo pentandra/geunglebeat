@@ -9,7 +9,7 @@ header[role="banner"] {
   @include single-box-shadow(#000, 0, 0, 10px);
 
   h1 {
-    margin: 6px;
+    margin: 6px $column;
   }
 }
 

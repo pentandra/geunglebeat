@@ -1,10 +1,10 @@
 body {
-  background-color: #a16432;
-  color: #2a1a0d;
+  background-color: $brown3;
+  color: $brown1-dark;
 }
 
 header[role="banner"] {
-  background: #2a1a0d url('/img/darkleather.jpg');
+  background: $brown1-dark url('/img/darkleather.jpg');
   margin: 0;
   @include single-box-shadow(#000, 0, 0, 10px);
 

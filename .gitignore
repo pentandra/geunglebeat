@@ -32,3 +32,6 @@ publish
 output
 .idea
 tmp
+
+# Environment specific files
+environment.rb

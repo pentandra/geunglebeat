@@ -90,14 +90,19 @@ route '/feed_private/' do
   item.identifier + 'index.xml'
 end
 
+route '/posts/*/' do
+  if item[:kind] == 'article'
+    if $include_drafts or item[:published] then
+      # Route blog posts to the root of the blog
+      item.identifier[6..-2] + '/index.html'
+    end
+  end
+end
+
 route '*' do
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop + '.' + item[:extension]
-  elsif item[:kind] == 'article'
-    if $include_drafts or item[:published] then
-      item.identifier + 'index.html'
-    end
   else
     # Write item with identifier /foo/ to /foo/index.html
     item.identifier + 'index.html'

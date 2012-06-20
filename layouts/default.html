@@ -22,9 +22,11 @@
       <h1 class="ir geungle-beat"><a href="/">Geungle Beat</a></h1>
     </div>
   </header>
+
   <div role="main" id="main">
     <%= yield %>
   </div>
+
   <footer>
 
   </footer>
@@ -36,7 +38,9 @@
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
 
+  <% if $show_grid then %>
   <script src="js/libs/GGS.js"></script>
+  <% end %>
 
   <% if $add_google_analytics then %>
   <script>

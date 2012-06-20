@@ -6,6 +6,7 @@ $spellcheck = true
 $use_minified_js = false
 $use_minified_css = false
 
+$show_grid = true
 $add_google_analytics = false
 
 $add_comments = false

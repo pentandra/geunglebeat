@@ -1,9 +1,9 @@
 <article class="group">
 
-  <div class="bd">
+  <div class="">
     <header>
-      <h1 class="large"><%= @item[:title] %></h1>
-      <small class="up">
+      <h1 class=""><%= @item[:title] %></h1>
+      <small class="">
         Written <time datetime="<%= @item[:created_at] %>" pubdate><%= @item[:created_at].strftime("%B %d, %Y") %></time> 
         by 
         <%= link_for_author( @item[:author_name], "/authors/") %>
@@ -18,7 +18,7 @@
 
   </div>
 
-  <aside class="aside">
+  <aside class="">
 
     <h2 class="visuallyhidden">Meta</h2>
 
@@ -33,18 +33,18 @@
 
       <figure id="author">
         <img class="photo" src="/img/<%= author[:name].to_slug %>.jpg" alt="Photo of <%= author[:name] %>" />
-        <figcaption class="mod">
-          <div class="big"><%= author[:name] %></div>
+        <figcaption class="">
+          <div class=""><%= author[:name] %></div>
           <div><%= author[:title] %></div>
         </figcaption>
       </figure>
     
     </section>
 
-    <section class="grab banner section static">
+    <section class="">
 
-      <div class="mod pod">
-        <h3 class="big">Share</h3>
+      <div class="">
+        <h3 class="">Share</h3>
         
         <div class="group" id="share" data-url="<%= shorten(url_for(@item)) %>" data-title="share" data-text="<%= @item[:title] %>"></div>
         
@@ -52,17 +52,17 @@
 
     </section>
 
-    <nav class="menu group mini">
-      <h3 class="big">Tags</h3>
+    <nav class="">
+      <h3 class="">Tags</h3>
 
-      <ul class="button">
+      <ul class="">
         <% [*@item[:tags]].each do |tag| %>
         <li><%= link_for_tag(tag, "/tags/") %></li>
         <% end %>
       </ul>
     </nav>
 
-    <div class="section">
+    <div class="">
 
       <a rel="bookmark" title="Permanent link to this article" href="<%= url_for(@item) %>">Permanent link</a> to this article
 

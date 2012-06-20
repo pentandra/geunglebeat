@@ -10,3 +10,4 @@ gem 'kramdown' # For advanced markdown
 gem 'rubypants' # For pretty typography
 gem 'activesupport' # for to_slug
 gem 'shortly' # For URL shortening
+gem 'builder'

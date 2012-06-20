@@ -1,0 +1,10 @@
+---
+title: The Geungle Beat
+feed_url: http://feeds.feedburner.com/geunglebeat
+author_name: Geungle
+author_uri: http://geungle.com
+articles: publishing_articles
+limit: 10
+---
+
+<%= atom_feed %>

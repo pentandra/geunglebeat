@@ -42,6 +42,10 @@ compile '/js/*/' do
   end
 end
 
+compile '/feed_private/' do
+  filter :erb
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
@@ -80,6 +84,10 @@ end
 route '/js/*/' do
   # don't generate a directory like we do for HTML files
   item.identifier.chop + '.js'
+end
+
+route '/feed_private/' do
+  item.identifier + 'index.xml'
 end
 
 route '*' do

@@ -6,7 +6,7 @@
 *	
 */
 
-var guideColor = 'rgb(227,69,54)';
+var guideColor = 'rgb(241,239,55)';
 var guideInnerColor = 'rgba(255,255,255, 0.91)';
 var guideOpacity = '0.618';
 

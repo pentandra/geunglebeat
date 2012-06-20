@@ -10,7 +10,7 @@ var guideColor = 'rgb(255,195,0)';
 var guideInnerColor = 'rgba(255,255,255, 0.91)';
 var guideOpacity = '0.618';
 
-var switchColor = 'rgb(0,0,0)';
+var switchColor = 'rgb(42,26,13)';
 var switchOpacity = '0.618';
 
 var baseFontSize = 16;

@@ -27,6 +27,7 @@ end
 
 compile '/css/*/' do
   filter :sass, Compass.sass_engine_options
+  filter :relativize_paths, :type => :css
 end
 
 compile '/js/*/' do
@@ -38,9 +39,16 @@ compile '*' do
     # don’t filter binary items
   else
     filter :erb
+
+    if item[:extension] == 'markdown'
+      filter :kramdown
+    end
+
     layout 'default'
 
+    filter :rubypants
     filter :relativize_paths, :type => :html
+    
   end
 end
 

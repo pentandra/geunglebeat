@@ -12,10 +12,12 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     fssm (0.2.9)
+    kramdown (0.13.7)
     nanoc (3.4.0)
       cri (~> 2.2)
     nokogiri (1.5.4)
     rack (1.4.1)
+    rubypants (0.2.0)
     sass (3.1.19)
 
 PLATFORMS
@@ -25,5 +27,7 @@ DEPENDENCIES
   adsf
   compass
   fssm
+  kramdown
   nanoc
   nokogiri
+  rubypants

@@ -27,16 +27,15 @@
       <h3>The Author</h3>
 
       <% 
-       company = @items.find { |i| i.identifier == '/company/' } 
-       author = company[:teammembers].find { |m| m[:first_name] + " " + m[:last_name] == @item[:author_name] }
+        author_name = @item[:author_name].to_slug
+        author = @items.find { |i| i.identifier == '/authors/' + author_name + '/' } 
       %>
 
       <figure id="author">
-        <img class="photo" src="<%= image_path(author) %>" alt="Photo of <%= full_name(author) %>" />
+        <img class="photo" src="/img/<%= author[:name].to_slug %>.jpg" alt="Photo of <%= author[:name] %>" />
         <figcaption class="mod">
-          <div class="big"><%= full_name(author) %></div>
+          <div class="big"><%= author[:name] %></div>
           <div><%= author[:title] %></div>
-          <a href="/company/#<%= full_name(author).to_slug %>">More about <%= author[:first_name] %></a>
         </figcaption>
       </figure>
     

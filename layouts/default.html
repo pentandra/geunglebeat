@@ -44,6 +44,10 @@
   <script src="/js/libs/GGS.js"></script>
   <% end %>
 
+  <% if @item[:kind] == "article" then %>
+  <script src="/js/libs/jquery.sharrre-1.3.2.min.js"></script>
+  <% end %>
+
   <% if $add_google_analytics then %>
   <script>
     var _gaq=[['_setAccount','UA-31074620-1'],['_trackPageview']];

@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (3.2.6)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
     adsf (1.1.1)
       rack (>= 1.0.0)
     chunky_png (1.2.5)
@@ -12,18 +15,29 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     fssm (0.2.9)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
+    i18n (0.6.0)
+    json (1.7.3)
     kramdown (0.13.7)
+    multi_json (1.3.6)
+    multi_xml (0.5.1)
     nanoc (3.4.0)
       cri (~> 2.2)
     nokogiri (1.5.4)
     rack (1.4.1)
     rubypants (0.2.0)
     sass (3.1.19)
+    shortly (0.3.3)
+      httparty
+      json
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   adsf
   compass
   fssm
@@ -31,3 +45,4 @@ DEPENDENCIES
   nanoc
   nokogiri
   rubypants
+  shortly

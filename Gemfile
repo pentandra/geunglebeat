@@ -8,3 +8,5 @@ gem 'adsf' # For viewing the site
 gem 'compass' # For nice stylesheets
 gem 'kramdown' # For advanced markdown
 gem 'rubypants' # For pretty typography
+gem 'activesupport' # for to_slug
+gem 'shortly' # For URL shortening

@@ -1,12 +1,21 @@
 body {
   background-color: $brown3;
+  background-image: url('/img/processes.png'), url('/img/square_bg.png');
   color: $brown1-dark;
+}
+
+article p, header {
+  margin-bottom: #{$line/$em}em;
 }
 
 header[role="banner"] {
   background: $brown1-dark url('/img/darkleather.jpg');
-  margin: 0;
-  @include single-box-shadow(#000, 0, 0, 10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: (($line*2)/$em) * 1em;
+  z-index: 1000;
 
   h1 {
     margin: 6px $column;
@@ -15,4 +24,72 @@ header[role="banner"] {
 
 .geungle-beat {
   background: transparent left center no-repeat url('/img/geungle_beat_logo.png');
+}
+
+//
+// Background classes
+//
+
+.basic {
+  @include border-radius($default-radius);
+}
+
+.simple {
+  border: 1px solid $brown1-dark;
+  @include border-radius($default-radius);
+}
+
+// Background skins
+
+.clarity {
+  background-color: $white;
+}
+
+.highlight {
+  background-color: $happy;
+}
+
+.comment {
+  background-color: $brown1-shade3;
+  color: $white;
+}
+
+.important {
+  background-color: $coral;
+  color: $white;
+}
+
+
+.raised {
+  @include single-box-shadow(#000, 0, 0, 10px);
+}
+
+//
+// Media block
+//
+
+.media {
+  .img {
+    float: left;
+    margin-right: #{($line/2)/$em}em;
+
+    img {
+      display: block;
+    }
+  }
+} 
+
+//
+// Social classes
+//
+
+.sharrre {
+
+  .button {
+    float: left;
+  }
+
+  .googleplus {
+    margin-right: 10px;
+  }
 }

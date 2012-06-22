@@ -16,10 +16,22 @@
 		font-size: #{($font-size) / $em}em;
 	}
 
-	#twoway .wrapper {
-		float: left;
-		width: 50%;
+	.post {
+
+    .content {
+      float: left;
+      width: 66.66667%;
+    }
+
+    .meta {
+      margin-top: #{$line/$em}em;
+      @include single-box-shadow($dirt, 6px, 0, 6px, -6px, true);
+      @include border-right-radius($default-radius);
+      float: left;
+      width: 33.33333%;
+    }
 	}
+
 
 }
 
@@ -42,8 +54,8 @@
 		font-size: #{($font-size) / $em}em;
 	}
 
-	header, #twoway {
-		margin: 0 $column*3;
+	.post {
+		margin: #{$line}px $column*3;
 	}
 
 }

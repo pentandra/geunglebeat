@@ -7,8 +7,17 @@
 *
 */
 
-header, #twoway {
-	margin: 0 $column;
+.post {
+	margin: #{$line/$em}em $column;
+}
+
+.box {
+  margin-top: #{($line/2)/$em}em;
+  margin-bottom: #{($line/2)/$em}em;
+}
+
+#main {
+  margin-top: #{$line*2/$em}em;
 }
 
 h1, h2 {

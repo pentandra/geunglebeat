@@ -1,70 +1,77 @@
-<article class="group">
+<article class="group post">
 
-  <div class="">
-    <header>
-      <h1 class=""><%= @item[:title] %></h1>
-      <small class="">
-        Written <time datetime="<%= @item[:created_at] %>" pubdate><%= @item[:created_at].strftime("%B %d, %Y") %></time> 
-        by 
-        <%= link_for_author( @item[:author_name], "/authors/") %>
-      </small>
-    </header>
+  <div class="content basic clarity">
+    <div class="wrapper">
+      <header>
+        <h1 class="huge"><%= @item[:title] %></h1>
+        <small class="">
+          Written <time datetime="<%= @item[:created_at] %>" pubdate><%= @item[:created_at].strftime("%B %d, %Y") %></time> 
+          by 
+          <%= link_for_author( @item[:author_name], "/authors/") %>
+        </small>
+      </header>
 
-    <div class="post">
-      <%= yield %>
-    </div>
-
-    <%= render "comments" %>
-
-  </div>
-
-  <aside class="">
-
-    <h2 class="visuallyhidden">Meta</h2>
-
-    <section>
-
-      <h3>The Author</h3>
-
-      <% 
-        author_name = @item[:author_name].to_slug
-        author = @items.find { |i| i.identifier == '/authors/' + author_name + '/' } 
-      %>
-
-      <figure id="author">
-        <img class="photo" src="/img/<%= author[:name].to_slug %>.jpg" alt="Photo of <%= author[:name] %>" />
-        <figcaption class="">
-          <div class=""><%= author[:name] %></div>
-          <div><%= author[:title] %></div>
-        </figcaption>
-      </figure>
-    
-    </section>
-
-    <section class="">
-
-      <div class="">
-        <h3 class="">Share</h3>
-        
-        <div class="group" id="share" data-url="<%= shorten(url_for(@item)) %>" data-title="share" data-text="<%= @item[:title] %>"></div>
-        
+      <div class="inner">
+        <%= yield %>
       </div>
 
-    </section>
+      <%= render "comments" %>
 
-    <nav class="">
-      <h3 class="">Tags</h3>
+    </div>
+  </div>
 
-      <ul class="">
-        <% [*@item[:tags]].each do |tag| %>
-        <li><%= link_for_tag(tag, "/tags/") %></li>
-        <% end %>
-      </ul>
-    </nav>
+  <aside class="meta clarity">
+    <div class="wrapper">
 
-    <div class="">
+      <h2 class="visuallyhidden">Meta</h2>
 
-      <a rel="bookmark" title="Permanent link to this article" href="<%= url_for(@item) %>">Permanent link</a> to this article
+      <section class="box comment basic group wrapper">
+
+        <h3>The Author</h3>
+
+        <% 
+          author_name = @item[:author_name].to_slug
+          author = @items.find { |i| i.identifier == '/authors/' + author_name + '/' } 
+        %>
+
+        <figure id="author" class="media box group">
+          <div class="img">
+            <img class="photo basic" src="/img/<%= author[:name].to_slug %>.jpg" alt="Photo of <%= author[:name] %>" />
+          </div>
+          <figcaption class="wrapper">
+            <div class=""><%= author[:name] %></div>
+            <div><%= author[:title] %></div>
+          </figcaption>
+        </figure>
+      
+      </section>
+
+      <section class="box group basic important wrapper">
+
+        <div class="box">
+          <h3 class="">Share</h3>
+          
+          <div class="group" id="share" data-url="<%= shorten(url_for(@item)) %>" data-title="share" data-text="<%= @item[:title] %>"></div>
+          
+        </div>
+
+      </section>
+
+      <nav class="box comment basic group wrapper">
+        <h3 class="">Tags</h3>
+
+        <ul class="">
+          <% [*@item[:tags]].each do |tag| %>
+          <li><%= link_for_tag(tag, "/tags/") %></li>
+          <% end %>
+        </ul>
+      </nav>
+
+      <div class="box">
+
+        <a rel="bookmark" title="Permanent link to this article" href="<%= url_for(@item) %>">Permanent link</a> to this article
+
+      </div>
 
     </div>
 

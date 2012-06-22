@@ -11,13 +11,15 @@ $(document).ready(function() {
       share: {
         googlePlus: true,
         facebook: true,
-        twitter: true
+        twitter: true,
+        linkedin: true
       },
 
       buttons: {
         googlePlus: { size: 'tall' },
         facebook: { layout: 'box_count' },
-        twitter: { count: 'vertical', via: 'PentandraInc' }
+        twitter: { count: 'vertical', via: 'geungle', related: 'PentandraInc:The Makers of Geungle' },
+        linkedin: { counter: 'top' }
       },
 
       urlCurl: '',

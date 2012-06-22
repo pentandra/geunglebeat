@@ -45,6 +45,21 @@ h3 {
 			box-sizing: border-box;
 }
 
+.content {
+
+  .inner {
+    font-family: 'Droid Serif', serif;
+
+    h1, h2 {
+      font-family: 'Droid Sans', sans-serif;
+    }
+  }
+
+  .wrapper {
+    padding: 0 #{$line/$em}em;
+  }
+}
+
 
 /*
 *

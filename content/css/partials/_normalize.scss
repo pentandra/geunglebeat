@@ -6,15 +6,15 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family: 'Droid Sans', sans-serif; color: #222; }
+html, button, input, select, textarea { font-family: 'Droid Sans', sans-serif; color: $brown1-dark; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: $coral; color: #fff; text-shadow: none; }
+::selection { background: $coral; color: #fff; text-shadow: none; }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: $blue4; text-decoration: none; }
+a:visited { color: $blue4; }
+a:hover { color: $sky-bright; text-decoration: underline; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 abbr[title] { border-bottom: 1px dotted; }

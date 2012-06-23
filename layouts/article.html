@@ -49,7 +49,7 @@
       <section class="box group basic important wrapper">
 
         <div class="box">
-          <h3 class="">Share</h3>
+          <h3>Share</h3>
           
           <div class="group" id="share" data-url="<%= shorten(url_for(@item)) %>" data-title="share" data-text="<%= @item[:title] %>"></div>
           
@@ -58,9 +58,9 @@
       </section>
 
       <nav class="box comment basic group wrapper">
-        <h3 class="">Tags</h3>
+        <h3>Tags</h3>
 
-        <ul class="">
+        <ul class="box">
           <% [*@item[:tags]].each do |tag| %>
           <li><%= link_for_tag(tag, "/tags/") %></li>
           <% end %>

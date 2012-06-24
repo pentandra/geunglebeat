@@ -7,7 +7,7 @@
 *
 */
 
-.post {
+.content {
 	margin: #{$line/$em}em $column;
 }
 
@@ -45,7 +45,7 @@ h3 {
 			box-sizing: border-box;
 }
 
-.content {
+.post {
 
   .inner {
     font-family: 'Droid Serif', serif;

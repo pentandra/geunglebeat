@@ -11,7 +11,7 @@
 /* @media screen and (min-width: 1872px) */
 @media screen and (min-width: 117em) {
 
-	.post {
+	.content {
 		margin: 0 $column*1;
 	}
 
@@ -20,11 +20,11 @@
 		margin-left: 25%;
 	}
 
-	.post .wrapper {
+	.content .wrapper {
 		width: 25%;
 	}
 
-	.post .wrapper:first-child {
+	.content .wrapper:first-child {
 		margin-left: 25%;
 	}
 

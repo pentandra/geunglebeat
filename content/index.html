@@ -1,10 +1,15 @@
 --- 
 title: Geungle Beat
 ---
-<h1>Geungle Beat</h1>
 
-<% @site.publishing_articles[0, 10].each do |article| %>
-<%= render('excerpt', :article => article) %>
-<% end %>
+<div class="group content">
 
-<%= render 'blog_meta' %>
+  <h1 class="huge">Geungle Beat</h1>
+
+  <% @site.publishing_articles[0, 10].each do |article| %>
+  <%= render('excerpt', :article => article) %>
+  <% end %>
+
+  <%= render 'blog_meta' %>
+
+</div>

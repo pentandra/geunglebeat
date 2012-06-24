@@ -1,7 +1,7 @@
-<footer class="group blogmeta">
+<footer class="group blogmeta meta">
 
-  <div class="">
-    <div class="">
+  <div class="wrapper">
+    <div class="box clarity basic group wrapper">
       <nav class="">
         <h2 class="">Authors</h2>
         
@@ -13,7 +13,7 @@
       </nav>
     </div>
 
-    <nav class="">
+    <nav class="box clarity basic group wrapper">
       <h2 class="">Tags A-Z</h2>
 
       <div class="group">
@@ -24,19 +24,19 @@
         </ul>
       </div>
     </nav>
-  </div>
 
-  <div class="">
-    <nav class="">
-      <h2 class="">Archives</h2>
+    <div class="box clarity basic group wrapper">
+      <nav class="">
+        <h2 class="">Archives</h2>
 
-      <ul>
-        <li><%= link_to 'Recent Articles', '/blog/' %></li>
-      <% archive_years(publishing_articles).sort.reverse.each do |year| %>
-        <li><%= link_for_archive(year, "/blog/") %></li>
-      <% end %>
-      </ul>
-    </nav>
+        <ul>
+          <li><%= link_to 'Recent Articles', '/blog/' %></li>
+        <% archive_years(publishing_articles).sort.reverse.each do |year| %>
+          <li><%= link_for_archive(year, "/blog/") %></li>
+        <% end %>
+        </ul>
+      </nav>
+    </div>
   </div>
 
 </footer>

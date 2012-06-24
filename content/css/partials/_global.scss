@@ -17,8 +17,26 @@ header[role="banner"] {
   height: (($line*2)/$em) * 1em;
   z-index: 1000;
 
+  .wrapper {
+    margin: 0 $column;
+  }
+
   h1 {
-    margin: 6px $column;
+    margin: 6px 0;
+  }
+}
+
+footer[role="contentinfo"] {
+  color: $white;
+  background-color: $brown1-dark;
+  @include single-box-shadow(black, 0, 6px, 6px, -6px, true);
+
+  .wrapper {
+    margin: 0 $column;
+  }
+
+  a {
+    color: $white;
   }
 }
 

@@ -5,6 +5,7 @@ body {
 
 article p, header {
   margin-bottom: #{$line/$em}em;
+  @include hyphens(auto);
 }
 
 header[role="banner"] {

@@ -1,0 +1,20 @@
+// Provides a mixin to define hyphenation
+//
+// Requires Compass
+//
+// (http://blog.fontdeck.com/post/9037028497/hyphens)
+// (http://www.w3.org/TR/css3-text/#hyphenation)
+//
+// $value - The hyphenation property value. One of "none", "manual", "auto" or "all"
+//
+// Example .scss:
+//
+// @include hyphens("auto");
+//
+// Sets hyphenation to "auto"
+
+@mixin hyphens($value: "manual") {
+  @each $prefix in -webkit-, -moz-, -o-, "" {
+    #{$prefix}hyphens: $value;
+  }
+}
